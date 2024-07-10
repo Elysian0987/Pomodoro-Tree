@@ -1,0 +1,104 @@
+.App {
+    text-align: center;
+    padding: 20px;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(43, 8, 8);
+}
+
+.timer-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #dfeeff;
+    /* #c9d8e8 */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.timer-display {
+    font-size: 4em;
+    margin-bottom: 200px;
+    font-weight: bold;
+}
+
+.timer-buttons {
+    margin-top: 20px;
+}
+
+.timer-buttons button {
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.timer-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.tree-container {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.tree {
+    font-size: 3em;
+    transition: height 0.5s ease;
+}
+
+.sapling, .tree {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.sapling {
+    height: 25%;
+}
+
+.sapling-medium {
+    height: 50%;
+}
+
+.tree-medium {
+    height: 75%;
+}
+
+.tree-full {
+    height: 100%;
+}
+
+/* Add these styles for tomatoes */
+.tomato {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2em;
+    animation: grow 25s linear forwards;
+}
+
+
