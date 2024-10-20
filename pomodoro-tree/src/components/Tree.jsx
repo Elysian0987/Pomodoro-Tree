@@ -1,18 +1,26 @@
 import React from 'react';
 import './Tree.css';
+// Import your images for each stage
+import seedImage from './assets/seed.png';
+import seedlingImage from './assets/seedling.png';
+import saplingImage from './assets/sapling.png';
+import largeSaplingImage from './assets/large-sapling.png';
+import fruitImage from './assets/fruit.png';
 
 const Tree = ({ timeLeft, totalTime }) => {
     const growthPercentage = ((totalTime - timeLeft) / totalTime) * 100;
 
     const renderTree = () => {
-        if (growthPercentage < 25) {
-            return <div className="sapling">🌱</div>;
-        } else if (growthPercentage < 50) {
-            return <div className="sapling sapling-medium">🌱</div>;
-        } else if (growthPercentage < 75) {
-            return <div className="tree tree-medium">🌳</div>;
+        if (growthPercentage < 20) {
+            return <img className="tree-stage" src={seedImage} alt="Seed" />;
+        } else if (growthPercentage < 40) {
+            return <img className="tree-stage" src={seedlingImage} alt="Seedling" />;
+        } else if (growthPercentage < 60) {
+            return <img className="tree-stage" src={saplingImage} alt="Sapling" />;
+        } else if (growthPercentage < 80) {
+            return <img className="tree-stage" src={largeSaplingImage} alt="Large Sapling" />;
         } else {
-            return <div className="tree tree-full">🌳</div>;
+            return <img className="tree-stage" src={fruitImage} alt="Fruit" />;
         }
     };
 
@@ -24,4 +32,3 @@ const Tree = ({ timeLeft, totalTime }) => {
 };
 
 export default Tree;
-

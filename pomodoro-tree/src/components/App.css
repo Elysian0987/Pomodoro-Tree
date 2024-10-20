@@ -3,6 +3,20 @@
     padding: 20px;
 }
 
+.app-container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+}
+
+.tomato-basket {
+    position: absolute; /* Allow positioning relative to the container */
+    top: 25px;          /* Distance from the top */
+    right: 25px;        /* Align to the right side of the page */
+    width: 50px;        /* Adjust width as needed */
+    height: auto;       /* Maintain aspect ratio */
+}
+
 .App-header {
     background-color: #282c34;
     min-height: 100vh;
@@ -16,10 +30,10 @@
 
 .timer-container {
     max-width: 400px;
+    height: 600px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #dfeeff;
-    /* #c9d8e8 */
+    background-color: #cadcf1;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -40,7 +54,7 @@
     margin: 0 10px;
     cursor: pointer;
     border: none;
-    background-color: #007bff;
+    background-color: #913d9e;
     color: white;
     border-radius: 4px;
     transition: background-color 0.3s ease;
@@ -50,55 +64,18 @@
     background-color: #0056b3;
 }
 
-.tree-container {
-    width: 100%;
-    height: 200px;
-    border: 1px solid #000;
-    position: relative;
-    margin-top: 20px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.tree {
-    font-size: 3em;
-    transition: height 0.5s ease;
-}
-
-.sapling, .tree {
+/* Tomato count display inside the basket */
+.tomato-count {
     position: absolute;
-    bottom: 0;
-    width: 100%;
+    top: 20px;
+    right: 70px; /* Adjust according to basket's position */
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-wrap: wrap; /* Allows the tomatoes to go to the next line if too many */
 }
 
-.sapling {
-    height: 25%;
+.tomato-image {
+    width: 20px; /* Adjust size of tomatoes */
+    height: auto;
+    margin-left: 5px; /* Spacing between tomatoes */
+    margin-bottom: 5px; /* Vertical spacing if they wrap */
 }
-
-.sapling-medium {
-    height: 50%;
-}
-
-.tree-medium {
-    height: 75%;
-}
-
-.tree-full {
-    height: 100%;
-}
-
-/* Add these styles for tomatoes */
-.tomato {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2em;
-    animation: grow 25s linear forwards;
-}
-
-

@@ -27,15 +27,17 @@ const Timer = () => {
 
     return (
         <div className="timer-container">
-            <h1 className="timer-display">
-                {Math.floor(timeLeft / 60)}:{timeLeft % 60 < 10 ? '0' : ''}{timeLeft % 60}
-            </h1>
+            <br></br>
+            <Tree timeLeft={timeLeft} totalTime={1500} />
+            <br></br>
             <div className="timer-buttons">
                 <button onClick={startTimer}>Start</button>
                 <button onClick={stopTimer}>Stop</button>
                 <button onClick={resetTimer}>Reset</button>
             </div>
-            <Tree timeLeft={timeLeft} totalTime={1500} />
+            <h1 className="timer-display">
+                {Math.floor(timeLeft / 60)}:{timeLeft % 60 < 10 ? '0' : ''}{timeLeft % 60}
+            </h1>
         </div>
     );
 };
